@@ -1,0 +1,23 @@
+>>>>>>>>
+soma 4 5
+raiz 5
+soma_tudo 4 5 6 1 2 3 4 5
+raiz 9
+soma 2 3
+soma_tudo -1 -2 -3 -4 -5 10
+end
+========
+$soma 4 5
+9
+$raiz 5
+2.24
+$soma_tudo 4 5 6 1 2 3 4 5
+30
+$raiz 9
+3.00
+$soma 2 3
+5
+$soma_tudo -1 -2 -3 -4 -5 10
+-5
+$end
+<<<<<<<<
