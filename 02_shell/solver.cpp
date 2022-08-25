@@ -28,14 +28,18 @@ std::vector<int> from_vet(std::string data) {
 }
 
 std::string fmt(std::vector<int> vet) {
-    
+    std::stringstream ss;
+    ss << "[";
+    for(int i = 0; i < (int) vet.size(); i++)
+        ss << (i != 0 ? "," : "") << vet[i];
+    ss << "]";
+    return ss.str();
 }
 
 int main() {
-    auto vet = from_vet("[1,2,3]");
-    for (auto elem : vet)
-        std::cout << elem << " ";
+    std::cout << fmt(from_vet("[1,2,3]")) << '\n';
     return 0;
+
 
     while (true) {
         std::string line {};
