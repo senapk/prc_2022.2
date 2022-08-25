@@ -10,6 +10,13 @@ bool in(std::vector<int> vet, int value) {
     return false;
 }
 
+int index_of(std::vector<int> vet, int value) {
+    for (int i = 0; i < (int) vet.size(); i++)
+        if (vet[i] == value)
+            return i;
+    return -1;
+}
+
 double average(std::vector<int> vet) {
     double value {};
     for (auto elem : vet)
@@ -61,6 +68,7 @@ int main() {
     while (true) {
         std::string line {};
         std::getline(std::cin, line); //ler a linha
+        std::cout << '$' << line << '\n';
         auto ui = split(line, ' ');   //quebrar em uma lista de palavras
         auto cmd = ui[0];
 
@@ -70,6 +78,8 @@ int main() {
             std::cout << fmt(in(to_vet(ui[1]), to<int>(ui[2]))) << '\n';
         } else if (cmd == "average") {
             std::cout << fmt(average(to_vet(ui[1]))) << '\n';
+        } else if (cmd == "index_of") {
+            std::cout << index_of(to_vet(ui[1]), to<int>(ui[2])) << '\n';
         } else {            
             std::cout << "fail: comando invalido\n";
         }
